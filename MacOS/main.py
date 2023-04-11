@@ -50,20 +50,22 @@ while True:
 
         print('What is the next word in the story?')
         L = input()
-        file1 = open('Story.txt','a')
-        file1.writelines(' ')
-        file1.writelines(L)
+        
+        if len(L.split()) == 1:
+            file1 = open('Story.txt','a')
+            file1.writelines(' ')
+            file1.writelines(L)
+
+        else:
+            print('You attempted to add more than one word, try again.')
+            time.sleep(2)
+            os.system('clear')
+            continue
 
     if len(L.split()) == 1:
         file2 = open('Names.txt','a')
         file2.writelines(N)
         file2.writelines('\n')
         file2.close()
-
-    if len(L.split()) != 1:
-        print('You attempted to add more than one word, try again.')
-        time.sleep(2)
-        os.system('clear')
-        continue
 
     os.system('clear')
