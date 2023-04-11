@@ -1,8 +1,8 @@
 import os
 import time
-os.system('cls')
+os.system('clear')
 while True:
-    os.system('cls')
+    os.system('clear')
     with open('Python-One-Word-Story\\MacOS\\Story.txt') as file:
         contents = file.read()
         search_word = 'EndStory'
@@ -19,11 +19,11 @@ while True:
             print('You have already added your word')
             print('If you wish to see the story put your name in as SeeStory')
             time.sleep(2.5)
-            os.system('cls')
+            os.system('clear')
             continue
 
     if N == 'SeeStory':
-        os.system('cls')
+        os.system('clear')
         file1 = open('Python-One-Word-Story\\MacOS\\Story.txt','r'
         file1.seek(0)
 
@@ -33,7 +33,7 @@ while True:
 
         file1.close()
         time.sleep(5)
-        os.system('cls')
+        os.system('clear')
         continue
 
     if search_word not in contents:
@@ -60,10 +60,10 @@ while True:
     if len(L.split()) != 1:
         print('You attempted to add more than one word, try again.')
         time.sleep(2)
-        os.system('cls')
+        os.system('clear')
         continue
 
-    os.system('cls')
+    os.system('clear')
 
     # Started at 5:45pm 10/4/2023
     # Finished at 8:57pm 10/4/2023
