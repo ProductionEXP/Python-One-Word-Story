@@ -1,42 +1,70 @@
-# Program to show various ways to read and
-# write data in a file.
-file1 = open("myfile.txt","w")
-L = ["This is Delhi \n","This is Paris \n","This is London \n"]
+import os
+import time
+os.system('cls')
+while True:
+    os.system('cls')
+    with open("D:\Documents\Github\Python-One-Word-Story\Story.txt") as file:
+        contents = file.read()
+        search_word = "EndStory"
+        if search_word in contents:
+            quit()
 
-# \n is placed to indicate EOL (End of Line)
-file1.write("Hello \n")
-file1.writelines(L)
-file1.close() #to change file access modes
+    print("What is your name?")
+    N = input()    
 
-file1 = open("myfile.txt","r+")
+    with open("D:\\Documents\\Github\\Python-One-Word-Story\\Names.txt") as file3:
+        contents = file3.read()
+        search_word = N
+        if search_word in contents:
+            print("You have already added your word")
+            print("If you wish to see the story put your name in as SeeStory")
+            time.sleep(2.5)
+            os.system('cls')
+            continue
 
-print("Output of Read function is ")
-print(file1.read())
-print()
+    if N == "SeeStory":
+        os.system('cls')
+        file1 = open("D:\Documents\Github\Python-One-Word-Story\Story.txt","r")
+        file1.seek(0)
 
-# seek(n) takes the file handle to the nth
-# byte from the beginning.
-file1.seek(0)
+        print( "Current Story is ")
+        print(file1.read())
+        print()
 
-print( "Output of Readline function is ")
-print(file1.readline())
-print()
+        file1.close()
+        time.sleep(5)
+        os.system('cls')
+        continue
 
-file1.seek(0)
+    if search_word not in contents:
+        file1 = open("D:\Documents\Github\Python-One-Word-Story\Story.txt","r")
+        file1.seek(0)
 
-# To show difference between read and readline
-print("Output of Read(9) function is ")
-print(file1.read(9))
-print()
+        print( "Current Story is ")
+        print(file1.read())
+        print()
 
-file1.seek(0)
+        file1.close()
 
-print("Output of Readline(9) function is ")
-print(file1.readline(9))
+        print( "What is the one word that you would like to add to the story?")
+        print( "Chose carefuly you can only add one.")
+        L = input()
+        file1 = open("D:\Documents\Github\Python-One-Word-Story\Story.txt","a")
 
-file1.seek(0)
-# readlines function
-print("Output of Readlines function is ")
-print(file1.readlines())
-print()
-file1.close()
+    if len(L.split()) == 1:
+        file2 = open("D:\\Documents\\Github\\Python-One-Word-Story\\Names.txt",'a')
+        file2.writelines(N)
+        file2.writelines("\n")
+        file2.close()
+
+    if len(L.split()) != 1:
+        print("You inputed more than one word, try again.")
+        time.sleep(2)
+        os.system('cls')
+        continue
+
+    os.system('cls')
+
+    # Started at 5:45pm 10/4/2023
+    # Finished at 8:57pm 10/4/2023
+    # I know this code is probably shit
