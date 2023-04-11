@@ -7,7 +7,7 @@ while True:
         contents = file.read()
         search_word = 'EndStory'
         if search_word in contents:
-            quit()
+            exit()
 
     print('What is your name?')
     N = input()    
