@@ -47,7 +47,7 @@ while True:
         file1.close()
 
         print( "What is the one word that you would like to add to the story?")
-        print( "Choose carefully you can only add one.")
+        print( "Choose carefully, you can only add one.")
         L = input()
         file1 = open("D:\Documents\Github\Python-One-Word-Story\Story.txt","a")
 
@@ -58,7 +58,7 @@ while True:
         file2.close()
 
     if len(L.split()) != 1:
-        print("You inputted more than one word, try again.")
+        print("You inputed more than one word, try again.")
         time.sleep(2)
         os.system('cls')
         continue
