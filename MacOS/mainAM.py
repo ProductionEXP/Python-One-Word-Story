@@ -10,8 +10,9 @@ while True:
             exit()
 
     print('What is your name?')
-    N = input()    
-
+    N1 = input()    
+    N = N1.lower()
+    
     os.system('clear')
 
     with open('Names.txt') as file3:
@@ -24,7 +25,7 @@ while True:
             os.system('clear')
             continue
         
-    if N == 'Admin':
+    if N == 'admin':
         print('Reqested Admin Access')
         print('To proceed enter password')
         AP = input()
@@ -37,16 +38,19 @@ while True:
             print('Clear story')
             print('Exit')
             print()
-            C = input()
-            if C == 'Clear names':
+            C1 = input()
+            C = C1.lower()
+            if C == 'clear names':
                 open('Names.txt', 'w').close()
                 print('Cleared Names')
                 time.sleep(2.5)
-            if C == 'Clear story':
+                os.system('clear')
+            if C == 'clear story':
                 open('Story.txt', 'w').close()
                 print('Cleared Story')
                 time.sleep(2.5)
-            if C == 'Exit':
+                os.system('clear')
+            if C == 'exit':
                 print('Exiting')
                 time.sleep(5)
                 exit()
@@ -80,6 +84,12 @@ while True:
 
         print('What is the next word in the story?')
         L = input()
+
+        if '-' in L:
+            print('You attempted to add more than one word, try again.')
+            time.sleep(2)
+            os.system('clear')
+            continue
         
         if len(L.split()) == 1:
             file1 = open('Story.txt','a')
