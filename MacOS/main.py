@@ -9,6 +9,7 @@ os.system('clear')
 while True:
     L = ''
     N = ''
+    search_word = ''
 
     os.system('clear')
 
@@ -114,7 +115,7 @@ while True:
 
                 if C == 'clear all':
                     open('Story.txt', 'w').close()
-                    time.system(0.1)
+                    time.sleep(0.1)
                     open('Names.txt', 'w').close()
                     print('Cleared all data')
                     time.sleep(2.5)

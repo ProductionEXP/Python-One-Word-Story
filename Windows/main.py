@@ -14,6 +14,7 @@ os.system('cls')
 while True:
     L = ''
     N = ''
+    search_word = ''
 
     os.system('cls')
 
@@ -119,6 +120,7 @@ while True:
 
                 if C == 'clear all':
                     open(Story, 'w').close()
+                    time.sleep(0.1)
                     open(Names, 'w').close()
                     print('Cleared all data')
                     time.sleep(2.5)
