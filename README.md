@@ -29,8 +29,8 @@ Password: AdminAccessPassword4132
 
 ### How to change either the username or password for admin mode
 
-  In the main.py file, in what ever os you use, line 4&5 are the username and password respectively. Edit the name and password within the ''. The name CAN NOT have any capitals, or the menu will be unassessable. The password can have any combination of letters, capitals and numbers.
-   
+  In the main.py file, in what ever os you use, line 4&5 are the username and password respectively. Edit the name and password within the '. The name CAN NOT have any capitals, or the menu will be unassessable. The password can have any combination of letters, capitals and numbers.
+
 #
 ## Other notes
   The MacOS version should work with linux, but this has not been tested.
