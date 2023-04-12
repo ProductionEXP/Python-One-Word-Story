@@ -15,6 +15,7 @@ while True:
     L = ''
     N = ''
     search_word = ''
+    contents = ''
 
     os.system('cls')
 
