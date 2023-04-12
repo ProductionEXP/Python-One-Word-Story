@@ -4,7 +4,7 @@
 
     Names of the past users : Names.txt
     The story               : Story.txt
-    The code to run         : main.py OR mainAM.py
+    The code to run         : main.py
 #    
 ## Admin mode
   In either of the OS main.py has a admin mode for adjustments in the script run. The default password and username are:
