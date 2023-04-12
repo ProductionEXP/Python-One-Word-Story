@@ -48,30 +48,60 @@ while True:
                 print('Clear names')
                 print('Clear story')
                 print('See Story')
+                print('Edit story')
+                print('Clear')
                 print('Exit')
                 print('End')
+                print('EXIT MAIN OPERATION')
                 print()
                 C1 = input()
                 C = C1.lower()
+
                 if C == 'help':
-                    print('Clear names - Clears the names file so that everyone can enter in another word')
-                    print('Clear story - CLears the story file, the names will stay but there will be no story')
-                    print('See Story   - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu')
-                    print('Exit        - Exits admin mode')
-                    print('End         - Ends the script')
+                    print()
+                    print('Clear names          - Clears the names file so that everyone can enter in another word')
+                    print('Clear story          - CLears the story file, the names will stay but there will be no story')
+                    print('See Story            - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu')
+                    print('Edit story           - Allows editing (only additions) to the story')
+                    print('Clear                - Clears the terminal')
+                    print('Exit                 - Exits admin mode')
+                    print('End                  - Ends the script')
+                    print('EXIT MAIN OPERATION  - Exits, nothing else can be added, displays the story and contributors')
                     print()
                     input('Press enter to continue')
                     os.system('cls')
+
+                if C == 'edit story':
+                    print('Here is the story currently')
+                    file1 = open(Story,'r')
+                    file1.seek(0)
+                    print(file1.read())
+                    print()
+                    file1.close()
+                    print('What would you like to add?')
+                    print('Hit enter twice when you are ready to submit your edits')
+                    ASI = input()
+                    input()
+                    file1 = open(Story,'a')
+                    file1.seek(0)
+                    file1.writelines(ASI)
+                    file1.close()
+                    print('Done')
+                    time.sleep(1)
+                    os.system('cls')
+
                 if C == 'clear names':
                     open(Names, 'w').close()
                     print('Cleared Names')
                     time.sleep(2.5)
                     os.system('cls')
+
                 if C == 'clear story':
                     open(Story, 'w').close()
                     print('Cleared Story')
                     time.sleep(2.5)
                     os.system('cls')
+
                 if C == 'see story':
                     file1 = open(Story,'r')
                     file1.seek(0)
@@ -81,15 +111,28 @@ while True:
                     input('Press enter to continue')
                     file1.close()
                     os.system('cls')
+
                 if C == 'exit':
                     os.system('cls')
                     break
+
                 if C == 'end':
                     os.system('cls')
                     exit()
+
+                if C == 'clear':
+                    os.system('cls')
+                
+                if C == 'exit main operation':
+                    break
                 continue
+
         else:
             continue
+
+    if C == 'exit main operation':
+        os.system('cls')
+        break 
 
     if N == 'seestory':
         os.system('cls')
@@ -142,3 +185,28 @@ while True:
         file2.close()
 
     os.system('cls')
+
+print('Exited main operation')
+input('Press enter to continue')
+os.system('cls')
+
+print('Final story')
+file1 = open(Story,'r')
+file1.seek(0)
+print(file1.read())
+print()
+print()
+print()
+file1.close()
+
+print('Contributors')
+file2 = open(Names,'r')
+file2.seek(0)
+print(file2.read())
+print()
+print()
+print()
+file2.close()
+
+input('Press enter to exit script')
+time.sleep(5)
