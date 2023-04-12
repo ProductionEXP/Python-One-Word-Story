@@ -4,12 +4,23 @@ import time
 AdminName = 'admin'
 AdminPassword = 'AdminAccessPassword4132'
 
-dirname1 = os.path.dirname(__file__)
-Story = os.path.join(dirname1, 'Story.txt')
-dirname = os.path.dirname(__file__)
-Names = os.path.join(dirname, 'Names.txt')
+if os.name == 'posix':
+    CleanScreen = 'clear'
 
-os.system('cls')
+if os.name == 'nt':
+    CleanScreen = 'cls'
+
+if os.name == 'nt':
+    dirname1 = os.path.dirname(__file__)
+    Story = os.path.join(dirname1, 'Story.txt')
+    dirname = os.path.dirname(__file__)
+    Names = os.path.join(dirname, 'Names.txt')
+
+if os.name == 'posix':
+    Story = 'Story.txt'
+    Names = 'Names.txt'
+
+os.system(CleanScreen)
 
 while True:
     L = ''
@@ -17,33 +28,33 @@ while True:
     search_word = ''
     contents = ''
 
-    os.system('cls')
+    os.system(CleanScreen)
 
     N1 = ''
     while len(N1.split()) != 2:
         print('What is your name? (First and last)')
         N1 = input()
         if N1.lower() == AdminName:
-            os.system('cls')
+            os.system(CleanScreen)
             break
         if len(N1.split()) == 2:
             N = N1.lower()
         else:
             print('Please enter both your first and last name')
             time.sleep(2)
-            os.system('cls')
+            os.system(CleanScreen)
     
-    os.system('cls')
+    os.system(CleanScreen)
 
     if N1.lower() != AdminName:
-        with open('Names.txt') as file3:
+        with open(Names) as file3:
             contents = file3.read()
             search_word = N
             if search_word in contents:
                 print('You have already added your word')
                 print('If you wish to see the story put your name in as See Story')
                 time.sleep(2.5)
-                os.system('cls')
+                os.system(CleanScreen)
                 continue
 
     C = ''      
@@ -52,7 +63,7 @@ while True:
         print('To proceed enter password')
         AP = input()
         if AP == AdminPassword:
-            os.system('cls')
+            os.system(CleanScreen)
             print('Access granted')
             print()
             while True:
@@ -86,7 +97,7 @@ while True:
                     print('EXIT MAIN OPERATION  - Exits, nothing else can be added, displays the story and contributors')
                     print()
                     input('Press enter to continue')
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'edit story':
                     print('Here is the story currently')
@@ -105,19 +116,19 @@ while True:
                     file1.close()
                     print('Done')
                     time.sleep(1)
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'clear names':
                     open(Names, 'w').close()
                     print('Cleared Names')
                     time.sleep(2.5)
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'clear story':
                     open(Story, 'w').close()
                     print('Cleared Story')
                     time.sleep(2.5)
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'clear all':
                     open(Story, 'w').close()
@@ -125,7 +136,7 @@ while True:
                     open(Names, 'w').close()
                     print('Cleared all data')
                     time.sleep(2.5)
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'see story':
                     file1 = open(Story,'r')
@@ -135,18 +146,18 @@ while True:
                     time.sleep(1)
                     input('Press enter to continue')
                     file1.close()
-                    os.system('cls')
+                    os.system(CleanScreen)
 
                 if C == 'exit':
-                    os.system('cls')
+                    os.system(CleanScreen)
                     break
 
                 if C == 'end':
-                    os.system('cls')
+                    os.system(CleanScreen)
                     exit()
 
                 if C == 'clear':
-                    os.system('cls')
+                    os.system(CleanScreen)
                 
                 if C == 'exit main operation':
                     break
@@ -156,11 +167,11 @@ while True:
             continue
 
     if C == 'exit main operation':
-        os.system('cls')
+        os.system(CleanScreen)
         break 
-
+            
     if N == 'see story':
-        os.system('cls')
+        os.system(CleanScreen)
         file1 = open(Story,'r')
         file1.seek(0)
 
@@ -170,7 +181,7 @@ while True:
 
         file1.close()
         time.sleep(5)
-        os.system('cls')
+        os.system(CleanScreen)
         continue
 
     if search_word not in contents and C != 'exit':
@@ -189,7 +200,7 @@ while True:
         if '-' in L:
             print('You attempted to add more than one word, try again.')
             time.sleep(2)
-            os.system('cls')
+            os.system(CleanScreen)
             continue
         
         if len(L.split()) == 1:
@@ -200,7 +211,7 @@ while True:
         else:
             print('You attempted to add more than one word, try again.')
             time.sleep(2)
-            os.system('cls')
+            os.system(CleanScreen)
             continue
 
     if len(L.split()) == 1:
@@ -209,11 +220,11 @@ while True:
         file2.writelines('\n')
         file2.close()
 
-    os.system('cls')
+    os.system(CleanScreen)
 
 print('Exited main operation')
 input('Press enter to continue')
-os.system('cls')
+os.system(CleanScreen)
 
 print('Final story')
 file1 = open(Story,'r')

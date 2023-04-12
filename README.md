@@ -1,18 +1,20 @@
 ## Python one word story
 
-  Each person inputs their name and then they are told the story so far, after reading they are allowed to add ONE word. Then that word is added and if that person inputs their name again they will be told they can not add another word, but can read they story. The naming file system is the same for all OS. 
+  Each person inputs their name and then they are told the story so far, after reading they are allowed to add ONE word. Then that word is added and if that person inputs their name again they will be told they can not add another word, but can read they story.
 
     Names of the past users : Names.txt
     The story               : Story.txt
+    Engilsh words           : words_dictionary.json
+    Banned words            : banned_words.txt
     The code to run         : main.py
 
 #
 ## Setup
-  If you are not familiar with github, hit the green code button and download as zip. From this zip take the folder that is named your OS and move it to where you want it. Then you can run the main.py file.
+  If you are not familiar with github, hit the green code button and download as zip. From this zip take the folder and move it to where you want it, then you can run the main.py file.
 
 #    
 ## Admin mode
-  In either of the OS main.py has a admin mode for adjustments in the script run. The default password and username are:
+  Admin mode allows editing of the what is happening to the story and script. You need to enter a username as your name and then enter a password. The default password and username are:
   
 Username (Name): Admin
 
@@ -38,6 +40,4 @@ Password: AdminAccessPassword4132
 
 #
 ## Other notes
-  The MacOS version should work with linux, but this has not been tested.
-
   Once you have used any of the admin mode commands to clear data that data is gone unless you made a backup
