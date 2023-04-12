@@ -17,7 +17,7 @@ while True:
 
     N1 = ''
     while len(N1.split()) != 2:
-        print('What is your name?')
+        print('What is your name? (First and last)')
         N1 = input()
         if N1.lower() == AdminName:
             break
@@ -28,15 +28,16 @@ while True:
     
     os.system('clear')
 
-    with open('Names.txt') as file3:
-        contents = file3.read()
-        search_word = N
-        if search_word in contents:
-            print('You have already added your word')
-            print('If you wish to see the story put your name in as See Story')
-            time.sleep(2.5)
-            os.system('clear')
-            continue
+    if N1.lower() != AdminName:
+        with open('Names.txt') as file3:
+            contents = file3.read()
+            search_word = N
+            if search_word in contents:
+                print('You have already added your word')
+                print('If you wish to see the story put your name in as See Story')
+                time.sleep(2.5)
+                os.system('clear')
+                continue
 
     C = ''      
     if N == AdminName:
