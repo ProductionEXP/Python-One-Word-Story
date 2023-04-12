@@ -14,17 +14,18 @@ Username (Name): Admin
 Password: AdminAccessPassword4132
 
 ### Admin mode commands
-
-  Help                - Displays this part of the README
-  Clear names         - Clears the names file so that everyone can enter in another word
-  Clear story         - CLears the story file, the names will stay but there will be no story
-  Clear all           - Clears both story and names at the same time
-  See Story           - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu
-  Edit story          - Allows editing (only additions) to the story
-  Clear               - Clears the terminal
-  Exit                - Exits admin mode
-  End                 - Ends the script
-  EXIT MAIN OPERATION - Exits, nothing else can be added, displays the story and contributors
+| Command             | Action                                                                                                                          |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Help                | Displays this part of the README                                                                                                |
+| Clear names         | Clears the names file so that everyone can enter in another word                                                                |
+| Clear story         | Clears the story file, the names will stay but there will be no story                                                           |
+| Clear all           | Clears both story and names at the same time                                                                                    |
+| See story           | Displays the story, after 1 sec you will be given the option to press any key to remove the story and go back to the admin menu |
+| Edit story          | Allows editing (only additions) to the story                                                                                    |
+| Clear               | Clears the terminal                                                                                                             |
+| Exit                | Exits admin mode                                                                                                                |
+| End                 | Ends the script                                                                                                                 |
+| EXIT MAIN OPERATION | Exits, nothing else can be added, displays the story and contributors                                                           |
 
 ### How to change either the username or password for admin mode
 

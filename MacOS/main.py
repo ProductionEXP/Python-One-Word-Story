@@ -57,7 +57,7 @@ while True:
                     print('Clear names          - Clears the names file so that everyone can enter in another word')
                     print('Clear story          - Clears the story file, the names will stay but there will be no story')
                     print('Clear all            - Clears both story and names at the same time')
-                    print('See Story            - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu')
+                    print('See Story            - Displays the story, after 1 sec you will be given the option to press any key to remove the story and go back to the admin menu')
                     print('Edit story           - Allows editing (only additions) to the story')
                     print('Clear                - Clears the terminal')
                     print('Exit                 - Exits admin mode')
