@@ -47,6 +47,7 @@ while True:
                 print('Help')
                 print('Clear names')
                 print('Clear story')
+                print('Clear all')
                 print('See Story')
                 print('Edit story')
                 print('Clear')
@@ -60,7 +61,8 @@ while True:
                 if C == 'help':
                     print()
                     print('Clear names          - Clears the names file so that everyone can enter in another word')
-                    print('Clear story          - CLears the story file, the names will stay but there will be no story')
+                    print('Clear story          - Clears the story file, the names will stay but there will be no story')
+                    print('Clear all            - Clears both story and names at the same time')
                     print('See Story            - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu')
                     print('Edit story           - Allows editing (only additions) to the story')
                     print('Clear                - Clears the terminal')
@@ -99,6 +101,13 @@ while True:
                 if C == 'clear story':
                     open(Story, 'w').close()
                     print('Cleared Story')
+                    time.sleep(2.5)
+                    os.system('cls')
+
+                if C == 'clear all':
+                    open(Story, 'w').close()
+                    open(Names, 'w').close()
+                    print('Cleared all data')
                     time.sleep(2.5)
                     os.system('cls')
 

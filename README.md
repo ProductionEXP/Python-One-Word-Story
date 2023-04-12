@@ -18,6 +18,7 @@ Password: AdminAccessPassword4132
   Help                - Displays this part of the README
   Clear names         - Clears the names file so that everyone can enter in another word
   Clear story         - CLears the story file, the names will stay but there will be no story
+  Clear all           - Clears both story and names at the same time
   See Story           - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu
   Edit story          - Allows editing (only additions) to the story
   Clear               - Clears the terminal
