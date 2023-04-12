@@ -44,3 +44,5 @@ Password: AdminAccessPassword4132
 #
 ## Other notes
   The MacOS version should work with linux, but this has not been tested.
+
+  Once you have used any of the admin mode commands to clear data that data is gone unless you made a backup

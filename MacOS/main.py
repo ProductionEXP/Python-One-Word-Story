@@ -212,4 +212,3 @@ print()
 file2.close()
 
 input('Press enter to exit script')
-time.sleep(5)
