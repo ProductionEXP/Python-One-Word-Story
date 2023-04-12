@@ -22,7 +22,7 @@ Password: AdminAccessPassword4132
   Exit        - Exits admin mode
   End         - Ends the script
 
-### To change either the username or password for admin mode
+### How to change either the username or password for admin mode
 
   Windows
 
