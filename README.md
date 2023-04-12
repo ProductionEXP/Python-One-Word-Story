@@ -20,9 +20,7 @@ Password: AdminAccessPassword4132
   Clear story - CLears the story file, the names will stay but there will be no story
   See Story   - Displays the story, after 1 sec you will be givin the option to press any key to remove the story and go back to the admin menu
   Exit        - Exits admin mode
-  End         - Ends the script
-
-  If you enter in a command that is not listed it will just return you to the original menu. 
+  End         - Ends the script 
 
 ### To change either the username or password for admin mode
 
