@@ -114,6 +114,7 @@ while True:
 
                 if C == 'clear all':
                     open('Story.txt', 'w').close()
+                    time.system(0.1)
                     open('Names.txt', 'w').close()
                     print('Cleared all data')
                     time.sleep(2.5)

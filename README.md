@@ -5,6 +5,11 @@
     Names of the past users : Names.txt
     The story               : Story.txt
     The code to run         : main.py
+
+#
+## Setup
+  If you are not familiar with github, hit the green code button and download as zip. From this zip take the folder that is named your OS and move it to where you want it. Then you can run the main.py file.
+
 #    
 ## Admin mode
   In either of the OS main.py has a admin mode for adjustments in the script run. The default password and username are:
