@@ -8,6 +8,8 @@ os.system('clear')
 
 while True:
     L = ''
+    N = ''
+
     os.system('clear')
     with open('Story.txt') as file:
         contents = file.read()
@@ -20,11 +22,14 @@ while True:
         print('What is your name? (First and last)')
         N1 = input()
         if N1.lower() == AdminName:
+            os.system('clear')
             break
         if len(N1.split()) == 2:
             N = N1.lower()
         else:
             print('Please enter both your first and last name')
+            time.sleep(2)
+            os.system('clear')
     
     os.system('clear')
 
@@ -40,7 +45,7 @@ while True:
                 continue
 
     C = ''      
-    if N == AdminName:
+    if N1.lower() == AdminName:
         print('Reqested Admin Access')
         print('To proceed enter password')
         AP = input()
