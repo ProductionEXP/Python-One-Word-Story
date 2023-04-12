@@ -2,6 +2,7 @@ import os
 import time
 os.system('clear')
 while True:
+    L = ''
     os.system('clear')
     with open('Story.txt') as file:
         contents = file.read()
@@ -24,7 +25,7 @@ while True:
             time.sleep(2.5)
             os.system('clear')
             continue
-        
+    C = ''   
     if N == 'admin':
         print('Reqested Admin Access')
         print('To proceed enter password')
@@ -53,7 +54,7 @@ while True:
                     print('Exit        - Exits admin mode')
                     print('End         - Ends the script')
                     print()
-                    input('Press any key to continue')
+                    input('Press return to continue')
                     os.system('clear')
                 if C == 'clear names':
                     open('Names.txt', 'w').close()
@@ -71,7 +72,7 @@ while True:
                     print(file1.read())
                     print()
                     time.sleep(1)
-                    input('Press any key to continue')
+                    input('Press return to continue')
                     file1.close()
                     os.system('clear')
                 if C == 'exit':
@@ -84,7 +85,7 @@ while True:
         else:
             continue
             
-    if N == 'SeeStory':
+    if N == 'seestory':
         os.system('clear')
         file1 = open('Story.txt','r')
         file1.seek(0)

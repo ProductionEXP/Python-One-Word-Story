@@ -31,7 +31,7 @@ while True:
             time.sleep(2.5)
             os.system('cls')
             continue
-        
+    C = ''      
     if N == 'admin':
         print('Reqested Admin Access')
         print('To proceed enter password')
@@ -60,7 +60,7 @@ while True:
                     print('Exit        - Exits admin mode')
                     print('End         - Ends the script')
                     print()
-                    input('Press any key to continue')
+                    input('Press enter to continue')
                     os.system('cls')
                 if C == 'clear names':
                     open(Names, 'w').close()
@@ -78,7 +78,7 @@ while True:
                     print(file1.read())
                     print()
                     time.sleep(1)
-                    input('Press any key to continue')
+                    input('Press enter to continue')
                     file1.close()
                     os.system('cls')
                 if C == 'exit':
@@ -91,7 +91,7 @@ while True:
         else:
             continue
 
-    if N == 'SeeStory':
+    if N == 'seestory':
         os.system('cls')
         file1 = open(Story,'r')
         file1.seek(0)

@@ -22,8 +22,6 @@ Password: AdminAccessPassword4132
   Exit        - Exits admin mode
   End         - Ends the script
 
-  If you enter in a command that is not listed it will just return you to the original menu. 
-
 ### To change either the username or password for admin mode
 
   Windows
