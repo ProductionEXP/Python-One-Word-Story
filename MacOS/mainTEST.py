@@ -1,6 +1,11 @@
 import os
 import time
+
+AdminName = 'admin'
+AdminPassword = 'AdminAccessPassword4132'
+
 os.system('clear')
+
 while True:
     L = ''
     os.system('clear')
@@ -9,9 +14,13 @@ while True:
         search_word = 'EndStory'
         if search_word in contents:
             exit()
-    while N1 != 2:
+
+    N1 = ''
+    while len(N1.split()) != 2:
         print('What is your name?')
-        N1 = input()    
+        N1 = input()
+        if N1.lower() == AdminName:
+            break
         if len(N1.split()) == 2:
             N = N1.lower()
         else:
@@ -24,16 +33,17 @@ while True:
         search_word = N
         if search_word in contents:
             print('You have already added your word')
-            print('If you wish to see the story put your name in as SeeStory')
+            print('If you wish to see the story put your name in as See Story')
             time.sleep(2.5)
             os.system('clear')
             continue
+
     C = ''      
-    if N == 'admin':
+    if N == AdminName:
         print('Reqested Admin Access')
         print('To proceed enter password')
         AP = input()
-        if AP == 'AdminAccessPassword4132':
+        if AP == AdminPassword:
             os.system('clear')
             print('Access granted')
             print()
@@ -140,7 +150,7 @@ while True:
         os.system('clear')
         break 
             
-    if N == 'seestory':
+    if N == 'see story':
         os.system('clear')
         file1 = open('Story.txt','r')
         file1.seek(0)
