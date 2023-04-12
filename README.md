@@ -29,19 +29,8 @@ Password: AdminAccessPassword4132
 
 ### How to change either the username or password for admin mode
 
-  Windows
-
-  In windows in the main.py file the username is located at line 35, if you wish to change it just remove admin and put in the new username. DO NOT USE CAPITALS, because for names the script forces everything to lower case, so if you make it capital it will be impossible to open the admin menu. Leave the ' at the begening and end of the username.
-
-  For the password on windows, it is located on line 39 (main.py), to change just remove AdminAccessPassword4132 and enter in your new password. Make sure to leave the ' at the begening and end of the password.
-
-#
-
-  MacOS
-
-  In MacOS in the main.py file the username is located at line 29, if you wish to change it just remove admin and put in the new username. DO NOT USE CAPITALS, because for names the script forces everything to lower case, so if you make it capital it will be impossible to open the admin menu. Leave the ' at the begening and end of the username.
-
-  For the password on MacOS, it is located on line 33 (main.py), to change just remove AdminAccessPassword4132 and enter in your new password. Make sure to leave the ' at the begening and end of the password.
+  In the main.py file, in what ever os you use, line 4&5 are the username and password respectively. Edit the name and password within the ''. The name CAN NOT have any capitals, or the menu will be unassessable. The password can have any combination of letters, capitals and numbers.
+   
 #
 ## Other notes
   The MacOS version should work with linux, but this has not been tested.
