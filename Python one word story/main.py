@@ -21,6 +21,7 @@ if os.name == 'nt':
 if os.name == 'posix':
     Story = 'Story.txt'
     Names = 'Names.txt'
+    wordbank = 'words_alpha.txt'
 
 os.system(CleanScreen)
 
