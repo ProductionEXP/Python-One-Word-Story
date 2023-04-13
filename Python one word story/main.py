@@ -209,14 +209,7 @@ while True:
         
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
-        lowerL = L.lower()
-
-        def compare(s1, s2):
-            remove = string.punctuation + string.whitespace
-            mapping = {ord(c): None for c in remove}
-            return s1.translate(mapping) == s2.translate(mapping)
-
-        if  compare(lowerL, Dictionary):
+        if  L.lower() not in Dictionary:
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
             WP = 1
