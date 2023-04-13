@@ -14,7 +14,7 @@
 
 #    
 ## Admin mode
-  Admin mode lets you do shit. You need to enter a username as your name and then enter a password. The default password and username are:
+  Admin mode lets you do many things to the current instance of the script. You need to enter a username as your name and then enter a password. The default password and username are:
   
 Username (Name): Admin
 
