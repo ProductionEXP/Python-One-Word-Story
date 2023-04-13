@@ -207,14 +207,16 @@ while True:
             os.system(CleanScreen)
             continue
         
-        lowerL = L.lower()
-
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
-        def cmp(lowerL, dictionary):
-            return [c for c in a if c.isalpha()] == [c for c in b if c.isalpha()]
- 
-        if  L.lower() not in Dictionary:
+        lowerL = L.lower()
+
+        def compare(s1, s2):
+            remove = string.punctuation + string.whitespace
+            mapping = {ord(c): None for c in remove}
+            return s1.translate(mapping) == s2.translate(mapping)
+
+        if  compare(lowerL, Dictionary):
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
             WP = 1
