@@ -1,5 +1,6 @@
 import os
 import time
+import string
 
 AdminName = 'admin'
 AdminPassword = 'AdminAccessPassword4132'
@@ -206,8 +207,13 @@ while True:
             os.system(CleanScreen)
             continue
         
+        lowerL = L.lower()
+
         Dictionary1 = open(wordbank, 'r')
-        Dictionary = Dictionary1.read() 
+        Dictionary = Dictionary1.read()
+        def cmp(lowerL, dictionary):
+            return [c for c in a if c.isalpha()] == [c for c in b if c.isalpha()]
+ 
         if  L.lower() not in Dictionary:
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
