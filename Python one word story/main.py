@@ -16,12 +16,16 @@ if os.name == 'nt':
     Story = os.path.join(dirname1, 'Story.txt')
     dirname2 = os.path.dirname(__file__)
     Names = os.path.join(dirname2, 'Names.txt')
+    dirname3 = os.path.dirname(__file__)
+    BannedWordsT = os.path.dirname(dirname3, 'bannedwords.txt')
     dirname = os.path.dirname(__file__)
     wordbank = os.path.join(dirname, 'words_alpha.txt')
+
 
 if os.name == 'posix':
     Story = 'Story.txt'
     Names = 'Names.txt'
+    BannedWordsT = 'bannedwords.txt'
     wordbank = 'words_alpha.txt'
 
 os.system(CleanScreen)
@@ -206,6 +210,17 @@ while True:
             time.sleep(2)
             os.system(CleanScreen)
             continue
+
+        BannedWords = open(BannedWordsT,'r')
+
+        if L.lower() in BannedWords:
+            print('You have entered a banned word, you can no longer add words.')
+            file2 = open(Names,'a')
+            file2.writelines(N)
+            file2.writelines('\n')
+            file2.close()
+            time.sleep(2.5)
+            break
         
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
