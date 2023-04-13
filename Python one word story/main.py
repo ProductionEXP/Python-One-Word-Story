@@ -13,8 +13,10 @@ if os.name == 'nt':
 if os.name == 'nt':
     dirname1 = os.path.dirname(__file__)
     Story = os.path.join(dirname1, 'Story.txt')
+    dirname2 = os.path.dirname(__file__)
+    Names = os.path.join(dirname2, 'Names.txt')
     dirname = os.path.dirname(__file__)
-    Names = os.path.join(dirname, 'Names.txt')
+    wordbank = os.path.join(dirname, 'words_alpha.txt')
 
 if os.name == 'posix':
     Story = 'Story.txt'
@@ -25,12 +27,14 @@ os.system(CleanScreen)
 while True:
     L = ''
     N = ''
+    C = '' 
+    N1 = ''
+    WP = 0
     search_word = ''
     contents = ''
 
     os.system(CleanScreen)
-
-    N1 = ''
+  
     while len(N1.split()) != 2:
         print('What is your name? (First and last)')
         N1 = input()
@@ -56,10 +60,9 @@ while True:
                 time.sleep(2.5)
                 os.system(CleanScreen)
                 continue
-
-    C = ''      
+     
     if N1.lower() == AdminName:
-        print('Reqested Admin Access')
+        print('Requested Admin Access')
         print('To proceed enter password')
         AP = input()
         if AP == AdminPassword:
@@ -162,7 +165,6 @@ while True:
                 if C == 'exit main operation':
                     break
                 continue
-
         else:
             continue
 
@@ -203,18 +205,28 @@ while True:
             os.system(CleanScreen)
             continue
         
-        if len(L.split()) == 1:
+        Dictionary1 = open(wordbank, 'r')
+        Dictionary = Dictionary1.read() 
+        if  L.lower() not in Dictionary:
+            print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
+            input('Press enter to continue')
+            WP = 1
+            Dictionary1.close()
+            os.system(CleanScreen)
+
+        if len(L.split()) == 1 and WP == 0:
             file1 = open(Story,'a')
             file1.writelines(' ')
             file1.writelines(L)
-
-        else:
+        elif WP == 0:
             print('You attempted to add more than one word, try again.')
             time.sleep(2)
             os.system(CleanScreen)
             continue
 
-    if len(L.split()) == 1:
+            
+
+    if len(L.split()) == 1 and WP == 0:
         file2 = open(Names,'a')
         file2.writelines(N)
         file2.writelines('\n')

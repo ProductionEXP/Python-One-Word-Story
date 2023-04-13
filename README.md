@@ -4,7 +4,7 @@
 
     Names of the past users : Names.txt
     The story               : Story.txt
-    Engilsh words           : words_dictionary.json
+    English words           : words_dictionary.json
     Banned words            : banned_words.txt
     The code to run         : main.py
 
@@ -14,7 +14,7 @@
 
 #    
 ## Admin mode
-  Admin mode allows editing of the what is happening to the story and script. You need to enter a username as your name and then enter a password. The default password and username are:
+  Admin mode lets you do shit. You need to enter a username as your name and then enter a password. The default password and username are:
   
 Username (Name): Admin
 
@@ -36,7 +36,7 @@ Password: AdminAccessPassword4132
 
 ### How to change either the username or password for admin mode
 
-  In the main.py file, in what ever os you use, line 4&5 are the username and password respectively. Edit the name and password within the '. The name CAN NOT have any capitals, or the menu will be unassessable. The password can have any combination of letters, capitals and numbers.
+  In the main.py file, in what ever os you use, line 4&5 are the username and password respectively. Edit the name and password within the '. The name CAN NOT have any capitals, or the menu will be inaccessible. The password can have any combination of letters, capitals and numbers.
 
 #
 ## Other notes
