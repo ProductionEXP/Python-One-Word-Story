@@ -4,8 +4,8 @@
 
     Names of the past users : Names.txt
     The story               : Story.txt
-    English words           : words_dictionary.json
-    Banned words            : banned_words.txt
+    English words           : words_alpha.txt
+    Banned words            : Bannedwords.txt
     The code to run         : main.py
 
 #

@@ -25,7 +25,7 @@ if os.name == 'nt':
 if os.name == 'posix':
     Story = 'Story.txt'
     Names = 'Names.txt'
-    BannedWordsT = 'bannedwords.txt'
+    BannedWordsT = 'Bannedwords.txt'
     wordbank = 'words_alpha.txt'
 
 os.system(CleanScreen)
@@ -36,6 +36,7 @@ while True:
     C = '' 
     N1 = ''
     WP = 0
+    Bw = 0
     search_word = ''
     contents = ''
 
@@ -210,10 +211,11 @@ while True:
             time.sleep(2)
             os.system(CleanScreen)
             continue
-
-        BannedWords = open(BannedWordsT,'r')
-
-        if L.lower() in BannedWords:
+        
+        BannedWordsR = open(BannedWordsT, 'r')
+        BannedWords = BannedWordsR.read()
+        Llower = L.lower()
+        if Llower in BannedWords:
             print('You have entered a banned word, you can no longer add words.')
             print('As this list is crude, please as the station mannager if you can add it, we can let that happen in some contexts.')
             file2 = open(Names,'a')
@@ -221,32 +223,34 @@ while True:
             file2.writelines(' - BANNEDWORD')
             file2.writelines('\n')
             file2.close()
+            Bw = 1
             input('Press enter to continue')
-            break
         
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
-        Llower = L.lower()
         UserInput = '.' + Llower
-        if  UserInput not in Dictionary:
+        if  UserInput not in Dictionary and Llower not in BannedWords:
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
             WP = 1
             Dictionary1.close()
             os.system(CleanScreen)
 
-        if len(L.split()) == 1 and WP == 0:
+        if len(L.split()) == 1 and WP == 0 and Bw == 0:
             file1 = open(Story,'a')
             file1.writelines(' ')
             file1.writelines(L)
-        elif WP == 0:
+        elif len(L.split()) == 0:
+            print('You did not enter a word, try again.')
+            time.sleep(2)
+            os.system(CleanScreen)
+            continue
+        elif WP == 0 and Bw == 0:
             print('You attempted to add more than one word, try again.')
             time.sleep(2)
             os.system(CleanScreen)
             continue
-
-            
-
+        
     if len(L.split()) == 1 and WP == 0:
         file2 = open(Names,'a')
         file2.writelines(N)
