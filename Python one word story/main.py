@@ -17,7 +17,7 @@ if os.name == 'nt':
     dirname2 = os.path.dirname(__file__)
     Names = os.path.join(dirname2, 'Names.txt')
     dirname3 = os.path.dirname(__file__)
-    BannedWordsT = os.path.dirname(dirname3, 'bannedwords.txt')
+    BannedWordsT = os.path.join(dirname3, 'Bannedwords.txt')
     dirname = os.path.dirname(__file__)
     wordbank = os.path.join(dirname, 'words_alpha.txt')
 
@@ -215,7 +215,7 @@ while True:
 
         if L.lower() in BannedWords:
             print('You have entered a banned word, you can no longer add words.')
-            print('Ask the current mannager at the station if you can add the word,\n we can add banned word somtimes, but it has to be in the right context.')
+            print('As this list is crude, please as the station mannager if you can add it, we can let that happen in some contexts.')
             file2 = open(Names,'a')
             file2.writelines(N)
             file2.writelines(' - BANNEDWORD')
@@ -226,7 +226,9 @@ while True:
         
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
-        if  L.lower() not in Dictionary:
+        Llower = L.lower()
+        UserInput = '.' + Llower
+        if  UserInput not in Dictionary:
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
             WP = 1
