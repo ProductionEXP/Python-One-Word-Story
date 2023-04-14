@@ -215,11 +215,13 @@ while True:
 
         if L.lower() in BannedWords:
             print('You have entered a banned word, you can no longer add words.')
+            print('Ask the current mannager at the station if you can add the word,\n we can add banned word somtimes, but it has to be in the right context.')
             file2 = open(Names,'a')
             file2.writelines(N)
+            file2.writelines(' - BANNEDWORD')
             file2.writelines('\n')
             file2.close()
-            time.sleep(2.5)
+            input('Press enter to continue')
             break
         
         Dictionary1 = open(wordbank, 'r')
