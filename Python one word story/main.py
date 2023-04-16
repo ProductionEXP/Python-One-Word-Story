@@ -215,7 +215,8 @@ while True:
         BannedWordsR = open(BannedWordsT, 'r')
         BannedWords = BannedWordsR.read()
         Llower = L.lower()
-        if Llower in BannedWords:
+        UserInput = '.' + Llower
+        if UserInput in BannedWords:
             print('You have entered a banned word, you can no longer add words.')
             print('As this list is crude, please as the station mannager if you can add it, we can let that happen in some contexts.')
             file2 = open(Names,'a')
@@ -228,7 +229,6 @@ while True:
         
         Dictionary1 = open(wordbank, 'r')
         Dictionary = Dictionary1.read()
-        UserInput = '.' + Llower
         if  UserInput not in Dictionary and Llower not in BannedWords:
             print('This word is not in our dictionary. \nIf you think it is a word call the mannager of the station over to have us add it')
             input('Press enter to continue')
