@@ -7,6 +7,8 @@
     English words           : words_alpha.txt
     Banned words            : Bannedwords.txt
     The code to run         : main.py
+    
+  ### This repository is no longer maintained
 
 #
 ## Setup
